@@ -1,0 +1,38 @@
+.page {
+  scroll-behavior: smooth;
+  font-family: $font-accent;
+
+  padding-inline: 20px;
+
+  @include on-tablet {
+    padding-inline: 34px;
+  }
+
+  &__body {
+    scroll-behavior: smooth;
+    margin: 0 auto;
+  }
+
+  &__menu {
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    transform: translateX(-100%);
+
+    overflow: auto;
+
+    opacity: 0;
+
+    transition:
+      transform $transition-default,
+      opacity $transition-default;
+
+    &:target {
+      pointer-events: all;
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+}
