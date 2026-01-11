@@ -1,0 +1,23 @@
+// Colors
+$color-primary: #1a5a4c;
+$color-accent: #f14a27;
+$color-text-main: #0f0e08;
+$color-text-secondary: #687480;
+$color-text-tertiary: #4e4e4e;
+$color-white: #fff;
+$color-gray-light: #e0e0e0;
+
+// Semantic Colors
+$color-shadow-card: rgba($color-primary, 0.25);
+$color-footer-line: rgba($color-primary, 0.5);
+$color-menu-overlay: rgba(0, 0, 0, 0.5);
+$color-menu-line: rgba(255, 255, 255, 0.5);
+$color-input-shadow: rgba(232, 232, 240, 0.4);
+
+// Typography
+$font-main: "IBM Plex Sans", sans-serif;
+$font-accent: "Montserrat", sans-serif;
+
+// Transitions
+$transition-default: 0.3s;
+$transition-fast: 250ms;
