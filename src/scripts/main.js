@@ -1,6 +1,6 @@
 'use strict';
 
-const buttons = document.querySelectorAll('.slider__nav-link');
+const buttons = document.querySelectorAll('.gallery__nav-link');
 
 buttons.forEach((button) => {
   button.addEventListener('click', () => {

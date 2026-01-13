@@ -3,6 +3,7 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+
   max-width: 1170px;
   margin: 0 auto;
 
@@ -23,148 +24,116 @@
     top: 27px;
     left: 0;
 
-    @include on-tablet {
-      top: 39px;
-    }
-
     width: 24px;
     height: 24px;
+
     background-image: url(images/icones/burger-menu-museum-3x.png);
     background-position: center;
     background-size: cover;
+
     transition: transform $transition-default;
 
     &:hover {
       transform: scale(1.2);
     }
+
+    @include on-tablet {
+      top: 39px;
+    }
   }
 
   &__image {
-    padding-block: 9px;
-    margin-inline: -20px;
-
-    @include on-tablet {
-      margin-inline: -34px;
-    }
-
     height: 300px;
+    margin-inline: -20px;
+    padding-block: 9px;
 
-    @include on-tablet {
-      height: 384px;
-    }
+    text-align: center;
 
     background-image: url(images/header-image-museum-3x.png);
     background-position: center;
     background-size: cover;
 
-    text-align: center;
+    @include on-tablet {
+      height: 384px;
+      margin-inline: -34px;
+    }
   }
 
   &__logo {
     margin: 0;
-
-    @include on-tablet {
-      width: 220px;
-    }
-
     padding: 0;
+
     font-weight: 700;
     font-size: 30px;
     line-height: 100%;
     text-transform: uppercase;
+
+    @include on-tablet {
+      width: 220px;
+    }
   }
 
   &__bottom {
-    @include on-tablet {
-      grid-column: 1 / 4;
-      grid-row: 1;
-      margin-top: 127px;
-    }
-
     display: flex;
     flex-direction: column;
     gap: 20px;
 
     @include on-tablet {
+      grid-column: 1 / 4;
+      grid-row: 1;
+      margin-top: 127px;
       gap: 38px;
     }
+  }
 
-    &-title {
-      margin: 0;
-      font-weight: 700;
-      font-size: 45px;
-      line-height: 100%;
-      text-align: center;
+  &__title {
+    margin: 0;
 
-      @include on-tablet {
-        text-align: left;
-      }
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 100%;
+    text-align: center;
+
+    @include on-tablet {
+      text-align: left;
     }
+  }
 
-    &-button {
-      padding: 0;
-      width: 100%;
-
-      @include on-tablet {
-        width: 270px;
-      }
-
-      display: flex;
-      flex-direction: row;
-      border: 1px solid $color-primary;
-      justify-content: space-between;
-      align-items: center;
-      height: 50px;
-
-      &-text {
-        flex-grow: 1;
-        text-align: center;
-        line-height: 50px;
-        font-weight: 500;
-        font-size: 16px;
-      }
-
-      &-btn {
-        padding: 0;
-        box-sizing: border-box;
-        width: 50px;
-        height: 50px;
-        background-color: $color-primary;
-        background-image: url(images/arrows/arrow-right-3x.png);
-        background-size: 50%;
-        background-position: center;
-        background-repeat: no-repeat;
-      }
+  &__button {
+    @include on-tablet {
+      width: 270px;
     }
+  }
 
-    &-events {
-      visibility: hidden;
-      position: absolute;
-      transform-origin: 0 0;
-      bottom: -50px;
-      display: flex;
-      align-items: center;
-      gap: 20px;
-      transform: rotate(-90deg);
+  &__events {
+    position: absolute;
+    bottom: -50px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
 
-      @include on-desktop {
-        visibility: visible;
-      }
+    visibility: hidden;
+    transform: rotate(-90deg);
+    transform-origin: 0 0;
 
-      &-line {
-        width: 70px;
-        height: 1px;
-        background-color: $color-primary;
-      }
-
-      &-text {
-        text-decoration: none;
-        text-transform: uppercase;
-        font-weight: 700;
-        font-size: 14px;
-        line-height: 100%;
-        color: $color-text-secondary;
-      }
+    @include on-desktop {
+      visibility: visible;
     }
+  }
+
+  &__events-line {
+    width: 70px;
+    height: 1px;
+
+    background-color: $color-primary;
+  }
+
+  &__events-link {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 100%;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $color-text-secondary;
   }
 }
