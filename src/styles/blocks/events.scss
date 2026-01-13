@@ -1,0 +1,12 @@
+.events {
+  &__title {
+    margin-top: 70px;
+    margin-bottom: 40px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+  }
+}

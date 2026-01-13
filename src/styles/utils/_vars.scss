@@ -15,8 +15,11 @@ $color-menu-line: rgba(255, 255, 255, 0.5);
 $color-input-shadow: rgba(232, 232, 240, 0.4);
 
 // Typography
-$font-main: "IBM Plex Sans", sans-serif;
-$font-accent: "Montserrat", sans-serif;
+$font-main: 'IBM Plex Sans', sans-serif;
+$font-accent: 'Montserrat', sans-serif;
+
+// Transforms
+$hover-scale: 1.1;
 
 // Transitions
 $transition-default: 0.3s;

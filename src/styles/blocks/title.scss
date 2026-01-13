@@ -1,0 +1,14 @@
+.title {
+  margin: 0;
+  font-family: $font-accent;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 100%;
+  text-align: center;
+
+  &--align-left-desktop {
+    @include on-tablet {
+      text-align: left;
+    }
+  }
+}

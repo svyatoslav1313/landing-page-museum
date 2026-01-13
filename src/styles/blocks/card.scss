@@ -13,9 +13,15 @@
     align-items: center;
   }
 
-  &__photo {
+  &__image {
     width: 100%;
     margin-bottom: 20px;
+
+    transition: transform $transition-default ease;
+
+    &:hover {
+      transform: scale($hover-scale);
+    }
 
     @include on-tablet {
       grid-column: 1 / -1;
@@ -24,37 +30,35 @@
     @include on-desktop {
       grid-column: 1 / 8;
     }
+  }
 
-    &-full {
-      margin-inline: -20px;
+  &__image-full {
+    height: 210px;
+    margin-inline: -20px;
 
-      height: 210px;
+    background-image: url(images/pictures/picture-3-3x.png);
+    background-position: center;
+    background-size: cover;
 
-      @include on-tablet {
-        height: 390px;
-      }
+    @include on-tablet {
+      height: 390px;
+      grid-column: 1 / -1;
+    }
 
-      @include on-desktop {
-        height: 550px;
-        margin-inline: -34px;
-      }
-
-      background-image: url(images/pictures/picture-3-3x.png);
-      background-position: center;
-      background-size: cover;
-
-      @include on-tablet {
-        grid-column: 1 / -1;
-      }
+    @include on-desktop {
+      height: 550px;
+      margin-inline: -34px;
     }
   }
 
-  &__info {
+  &__meta {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-family: $font-main;
+
     margin-bottom: 10px;
+
+    font-family: $font-main;
 
     @include on-tablet {
       justify-content: start;
@@ -62,8 +66,9 @@
     }
   }
 
-  &__exhibition {
+  &__category {
     margin: 0;
+
     font-weight: 500;
     font-size: 16px;
     line-height: 100%;
@@ -77,30 +82,35 @@
     color: $color-primary;
   }
 
-  &__title {
-    font-family: $font-accent;
+  &__heading-wrapper {
     display: flex;
     gap: 10px;
     align-items: center;
+
     margin-bottom: 10px;
 
-    &-text {
-      margin: 0;
-      font-weight: 400;
-      font-size: 28px;
-      line-height: 100%;
-      color: $color-text-main;
-    }
-
-    &-square {
-      width: 10px;
-      height: 10px;
-      background-color: $color-accent;
-    }
+    font-family: $font-accent;
   }
 
-  &__description {
+  &__heading {
     margin: 0;
+
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 100%;
+    color: $color-text-main;
+  }
+
+  &__marker {
+    width: 10px;
+    height: 10px;
+
+    background-color: $color-accent;
+  }
+
+  &__text {
+    margin: 0;
+
     font-family: $font-main;
     font-weight: 300;
     font-size: 16px;
@@ -108,7 +118,7 @@
     color: $color-text-tertiary;
   }
 
-  &__wrap {
+  &__content {
     @include on-tablet {
       grid-column: 1 / 5;
     }
